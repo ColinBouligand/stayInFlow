@@ -26,27 +26,3 @@ if(currentURL.includes("https://www.youtube.com/"))
 
  
 }
-//Colorer l'emploi du temps
-if(currentURL=== "https://edt.univ-angers.fr/edt/ressource?type=G9FDC055BB1C34F92E0530100007F467B&id=9F8A5BD6B1C188EDE0530100007FD17D")
-
-console.log("edt")
-const delai = 1000;
-function select() {
-
-   document.querySelectorAll('.fc-title').forEach( e=> {
-      [
-        /Synthèse d'images/i,
-        /interfaces graphiques/i,
-        //Traitement de données/i,
-        //systèmes intelligents/i,
-        /Groupe 1/i,
-        /Groupe 2/i,
-        //Groupe 3/i,
-      ] . forEach( regexcour => {
-      if( e.innerHTML.match(regexcour) ) {
-            console.log("oui")
-         //e.parentElement.parentElement.style.visibility = "hidden"
-      } } );
-   });
-}
-window.addEventListener('load', temporisation => setTimeout(select,delai) );
