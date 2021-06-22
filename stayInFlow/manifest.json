@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "stayInFlow",
+  "version": "0.1",
+  "icons": {
+    "48": "icons/liberty.png"
+  },
+  "thanks": "Freepik",
+  "filter": {"scripts": ["jquery-3.2.1.min.js", "filter.js"]},
+  "content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'",
+  "description": "Hide recommandations from youtube pages",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["filter.js"]
+    }
+  ]
+}
